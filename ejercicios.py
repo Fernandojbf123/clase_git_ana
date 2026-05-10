@@ -24,8 +24,14 @@
 ### Ejercicio 3 
 # Suma de elementos
 # Dado un arreglo de números, calcula la suma total usando for.
-# arr = [3, 5, 7, 2, 8]
+arr = [3, 5, 7, 2, 8]
 
+suma = 0
+
+for numero in arr:
+    suma = suma + numero
+
+print(suma)
 
 
 ### Ejercicio 4
