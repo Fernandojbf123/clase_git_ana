@@ -35,46 +35,104 @@ print(suma)
 
 
 ### Ejercicio 4
-# Contar ocurrencias
-# Dado un arreglo de números y un valor específico,
-# cuenta cuántas veces aparece un número específico en una lista.
-# arr = [1, 2, 3, 2, 4, 2, 5]
-# valor = 2
+# Contar ocurrencias    
+# Cuenta cuántas veces aparece un número específico en la lista.
+arr = [1, 2, 3, 4, 2, 5, 2]
+valor = 2       
+
+contador = 0
+for numero in arr:
+    if numero == valor:
+        contador +=1
+
+print(f"El numero {valor} aparece {contador} veces en arr")
 
 
 
 ### Ejercicio 5
 # Encontrar el máximo
 # Encuentra el valor más grande del arreglo sin usar max().
-# arr = [10, 3, 25, 7, 18]
+arr = [3, 5, 7, 2, 8]
+maximo = arr[0]
+
+for numero in arr:
+    if numero > maximo:
+        maximo = numero
+
+print(f"Encuentra el maximo valor mas grande sin usar max() = {maximo}")
 
 
 ### Ejercicio 6
 # Contar números pares
-# Cuenta cuántos números pares hay en la lista.
-# arr = [1, 4, 6, 9, 10, 13]
+arr = [1, 4, 6, 9, 10, 13]
+contado = 0
+
+for numero in arr:
+    if numero /2 == 0:
+        contador +=1
+
+print(f"cuantos numeros pares hay en arr = {contador}")
 
 
 ### Ejercicio 7
 # Invertir lista
 # Crea una nueva lista con los elementos en orden inverso usando for.
-# arr = [1, 2, 3, 4, 5]
+
+# lista original de arr
+arr = [1, 2, 3, 4, 5]
+
+# nueva lista de arr inversa
+lista_arr_inversa = []
+
+# for i in range(len(arr)-1, -1, -1):
+#     lista_arr_inversa.append(arr[i])
+
+for numero in arr:
+    lista_arr_inversa.insert(0, numero)
+
+
+print(f"lista arr original = {arr}")
+print(f"lista arr inversa = {lista_arr_inversa}")
 
 
 ### Ejercicio 8
 # Filtrar valores mayores a X
 # Construye una nueva lista con los valores mayores a un número dado.
-# arr = [5, 12, 7, 20, 3]
-# x = 10
+arr = [5, 12, 7, 20, 3]
+x = 10
+resultado =[]
+
+for numero in arr:
+    if numero > x:
+        resultado.append(numero)
+
+print(f"valores mayores a {x} in arr = {resultado}")
 
 
 ### Ejercicio 9
 # Contar vocales en un string
 # Cuenta cuántas vocales hay en un texto.
-# texto = "data science"
+texto = "data science"
+
+vocales = "aeiouAEIOU"
+contador = 0
+
+for letra in texto:
+    if letra in vocales:
+        contador +=1
+
+print(f"cantidad de vocales en el texto = {contador}")
 
 
 ### Ejercicio 10
 # Eliminar duplicados (sin usar set)
 # Crea una nueva lista sin elementos repetidos, respetando el orden original.
-# arr = [1, 2, 2, 3, 4, 3, 5]
+
+arr = [1, 2, 2, 3, 4, 3, 5]
+resultado = []
+for numero in arr:
+    if numero not in resultado:
+        resultado.append(numero)
+
+print(resultado)
+
